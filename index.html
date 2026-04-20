@@ -1848,10 +1848,11 @@ state.tieBreakExtra = {};
   const sorted = sortTeamsByScore(state.activeTeamNames);
   const cutoff = state.cutoff;
 
-      const showExtraCol =
-  (state.stageIndex !== 3) &&
-  Object.values(state.stageTieExtra || {}).some(v => (Number(v) || 0) > 0);
-$('thTieExtra').classList.toggle('d-none', !showExtraCol);
+  const showExtraCol =
+    (state.stageIndex !== 3) &&
+    Object.values(state.stageTieExtra || {}).some(v => (Number(v) || 0) > 0);
+
+  $('thTieExtra').classList.toggle('d-none', !showExtraCol);
 
   $('scoreboardTitle').textContent = `${state.stageName} Puan Tablosu`;
   if(state.stageIndex === 1){
@@ -1877,23 +1878,23 @@ $('thTieExtra').classList.toggle('d-none', !showExtraCol);
     if(idx===3) tr.classList.add('rank-4');
 
     const extra = state.stageTieExtra?.[t.name];
-const extraCell = showExtraCol
-  ? `<td class="text-end fw-bold">${typeof extra === 'number' && extra > 0 ? extra : '—'}</td>`
-  : '';
+    const extraCell = showExtraCol
+      ? `<td class="text-end fw-bold">${typeof extra === 'number' && extra > 0 ? extra : '—'}</td>`
+      : '';
 
     tr.innerHTML = `
-  <td class="fw-bold">${idx+1}</td>
-  <td class="fw-bold">${escapeHtml(t.name)}</td>
-  <td class="text-end fw-bold fs-5">${t.score}</td>
-  ${extraCell}
-  <td class="text-end">
-    <span class="badge ${status==='Üst Tura' ? 'text-bg-success' :
-                        status==='Elendi' ? 'text-bg-secondary' :
-                        status==='ŞAMPİYON' ? 'text-bg-success' : 'text-bg-light'}">
-      ${status}
-    </span>
-  </td>
-`;
+      <td class="fw-bold">${idx+1}</td>
+      <td class="fw-bold">${escapeHtml(t.name)}</td>
+      <td class="text-end fw-bold fs-5">${t.score}</td>
+      ${extraCell}
+      <td class="text-end">
+        <span class="badge ${status==='Üst Tura' ? 'text-bg-success' :
+                            status==='Elendi' ? 'text-bg-secondary' :
+                            status==='ŞAMPİYON' ? 'text-bg-success' : 'text-bg-light'}">
+          ${status}
+        </span>
+      </td>
+    `;
     tbody.appendChild(tr);
   });
 
@@ -1901,12 +1902,48 @@ const extraCell = showExtraCol
   const tie = computeCutoffTie(state.activeTeamNames, cutoff);
   const tieInfo = $('tieInfo');
 
-  showScoreboardForStage
+  if(tie.hasTie){
+    if(!state.tieBreakLocked){
+      const sortedNow = sortTeamsByScore(state.activeTeamNames);
 
-  // Eğer tie yoksa normalde DEVAM butonu görünür olmalı
+      const safeAbove = sortedNow
+        .slice(0, cutoff)
+        .filter(t => !tie.tiedNames.includes(t.name))
+        .length;
+
+      const slots = cutoff - safeAbove;
+
+      state.tieBreak = true;
+      state.tieBreakLocked = true;
+      state.tieCandidates = tie.tiedNames.slice();
+      state.tieBreakSlots = slots;
+
+      state.tieBreakQuestionsAsked = 0;
+      state.tieSafeNames = sortedNow
+        .slice(0, cutoff)
+        .filter(t => !tie.tiedNames.includes(t.name))
+        .map(t => t.name);
+
+      state.tieBreakBaseScores = {};
+      state.tieBreakExtra = {};
+
+      state.tieCandidates.forEach(n=>{
+        const team = state.teams.find(t=>t.name===n);
+        state.tieBreakBaseScores[n] = team ? team.score : 0;
+        state.tieBreakExtra[n] = state.stageTieExtra[n] || 0;
+      });
+    }
+
+    tieInfo.classList.remove('d-none');
+    stopStandby();
+    showScreen('screenQuestion');
+    nextQuestion();
+    return;
+  }
+
   $('btnProceedNextStage').classList.toggle('d-none', state.stageIndex === 3);
-  $('tieInfo').classList.add('d-none');
-} // ✅ showScoreboardForStage BURADA BİTER
+  tieInfo.classList.add('d-none');
+}// ✅ showScoreboardForStage BURADA BİTER
 
 
 // ✅ BUNLAR DIŞARIDA OLMALI (GLOBAL SCOPE)
