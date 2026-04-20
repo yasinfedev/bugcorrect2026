@@ -554,11 +554,11 @@ Nabız yok biz varız
      *  CONFIG & QUESTION DB
      ***********************/
     const CATEGORY = {
-      YESIL: { key:'YESIL', label:'YEŞİL', points:10, dot:'#198754' },
-      SARI:  { key:'SARI',  label:'SARI',  points:15, dot:'#ffc107' },
-      KIRMIZI:{key:'KIRMIZI',label:'KIRMIZI',points:25, dot:'#dc3545' },
-      BONUS: { key:'BONUS', label:'BONUS', points:5, dot:'#0d6efd' }
-    };
+  YESIL: { key:'YESIL', label:'YEŞİL', points:10, dot:'#198754' },
+  SARI:  { key:'SARI',  label:'SARI',  points:15, dot:'#ffc107' },
+  KIRMIZI:{key:'KIRMIZI',label:'KIRMIZI',points:25, dot:'#dc3545' },
+  BONUS: { key:'BONUS', label:'BONUS', points:4, tiePoints:5, dot:'#0d6efd' }
+};
 
     // Soru formatı:
     // { id, categoryKey, question, options:{A,B,C,D}, answer:'A'|'B'|'C'|'D' }
@@ -1595,7 +1595,13 @@ if(cat.key === 'SARI') chip.classList.add('text-bg-warning');
 if(cat.key === 'KIRMIZI') chip.classList.add('text-bg-danger');
 if(cat.key === 'BONUS') chip.classList.add('text-bg-primary');
       setArenaTheme(cat.key);
-      $('txtPoints').textContent = cat.points;
+      let displayPoints = cat.points;
+
+if(state.tieBreak && cat.key === 'BONUS'){
+  displayPoints = cat.tiePoints;
+}
+
+$('txtPoints').textContent = displayPoints;
       $('txtQCounter').textContent = questionIndexText;
 
       $('chipMode').classList.toggle('d-none', !state.tieBreak);
@@ -1679,7 +1685,12 @@ formatStagePills();
   });
 }
     function savePointsFromModal(){
-  const pts = CATEGORY[state.currentQuestion.categoryKey].points;
+  let pts = CATEGORY[state.currentQuestion.categoryKey].points;
+
+  // Tie-break bonus soruları 5 puan olsun
+  if(state.tieBreak && state.currentQuestion.categoryKey === 'BONUS'){
+    pts = CATEGORY.BONUS.tiePoints;
+  }
 
   if(state.tieBreak){
     state.tieBreakQuestionsAsked += 1;
