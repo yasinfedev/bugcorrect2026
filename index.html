@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="tr">
 <head>
@@ -70,8 +71,8 @@
 
     .question-wrap{ padding: clamp(1rem, 2.5vw, 2rem); }
     .q-text{
-      font-size: clamp(1.2rem, 2.2vw, 2rem);
-      font-weight: 850;
+      font-size: clamp(1.0rem, 2.2vw, 2rem);
+      font-weight: 550;
       letter-spacing: -.01em;
     }
     .option-btn{
@@ -329,8 +330,8 @@
               <label class="form-label fw-bold">Yarışmadaki Takımlar Listesi</label>
               <textarea id="teamTextarea" class="form-control" rows="10" placeholder="Örn:
 Konya City
-Ankara Resüs
-İzmir Şok
+Nabız yok biz varız
+9'uncu Senfoni
 ..."></textarea>
             </div>
             <div class="col-md-3">
@@ -365,8 +366,8 @@ Ankara Resüs
           <hr>
           <!-- Kongre Banner -->
 <div class="rules-banner">
-  <img src="https://acil42.com/wp-content/uploads/2026/02/Ekran-Resmi-2026-02-13-18.11.12.png"
-       alt="April Congress 2026">
+  <img src="https://acil42.com/wp-content/uploads/2026/04/Dosya.png"
+       alt="ATUDER_EPAT_Logo">
  
 </div>
            <hr>
@@ -458,7 +459,7 @@ Ankara Resüs
           <div class="footer-note">Bu tablo, her “PUAN GİR” işleminden sonra güncellenir.</div>
           <hr>
           <div class="score-logo-wrap">
-  <center><img src="https://acil42.com/wp-content/uploads/2026/02/bilyam-logo-3.png" alt="BİLYAM Logo" class="score-logo"></center>
+  <center><img src="https://acil42.com/wp-content/uploads/2026/04/Dosya.png" alt="ATUDER Logo" class="score-logo"></center>
 </div>
         </div>
 
@@ -597,431 +598,634 @@ Ankara Resüs
   // ✅ YEŞİL (20 soru) — 10 puan
   // =========================
   {
-    id: "YESIL-001",
+    id: "YESIL-001",//yazdık
     categoryKey: "YESIL",
-    question: "Anafilakside ilk basamak ilaç hangisidir?",
-    options: { A: "IV steroid", B: "IM adrenalin", C: "IV antihistaminik", D: "Nebül salbutamol" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-002",
-    categoryKey: "YESIL",
-    question: "Erişkin hipoglisemide acilde sık kullanılan IV dekstroz konsantrasyonu hangisidir?",
-    options: { A: "%5", B: "%10", C: "%20", D: "%50" },
+    question: "2019 ESC Supraventriküler Taşikardi Kılavuzu'nda geniş QRS taşikardilerin akut yönetim algoritmasında aşağıdaki yaklaşımlardan hangisi yer almaz?",
+    options: { A: "Prokainamid", B: "Adenozin (düzenli monorfik taşikardilerde)", C: "Vagal manevra", D: "Diltiazem" },
     answer: "D"
   },
   {
-    id: "YESIL-003",
+    id: "YESIL-002",//yazdık
     categoryKey: "YESIL",
-    question: "Acil serviste triyajda 'Kırmızı' alan genel olarak neyi ifade eder?",
-    options: { A: "Acil olmayan", B: "Gecikebilir", C: "Hayatı tehdit eden", D: "Kontrol randevusu" },
+    question: "Hepatik ensefalopatiyi tetikleyen faktörler arasında aşağıdakilerden hangisi yer almaz?",
+    options: { A: "Gastrointestinal kanama", B: "Hiponatremi", C: "Metabolik alkaloz", D: "Hiperkalemi" },
+    answer: "D"
+  },
+  {
+    id: "YESIL-003", //yazdık
+    categoryKey: "YESIL",
+    question: "Aşağıdakilerden hangisi radius başı kırığı ile ilişkili değildir?",
+    options: { A: "Sail sign (yelken bulgusu)", B: "Posterior fat pad sign (arka yağ yastıkçığı) bulgusu", C: "Radiokapitellar hattın bozulması", D: "Anterior humeral hattın bozulması" },
+    answer: "D"
+  },
+  {
+    id: "YESIL-004",//yazıldı
+    categoryKey: "YESIL",
+    question: "Aşağıdaki zehirlenmelerden hangisinde metabolik asidoz beklenmez?",
+    options: { A: "Metanol", B: "Etilen glikol", C: "İzopropanol", D: "Siyanür" },
     answer: "C"
   },
   {
-    id: "YESIL-004",
+    id: "YESIL-005",//yazıldı
     categoryKey: "YESIL",
-    question: "Acil serviste el hijyeni için en temel yöntem hangisidir?",
-    options: { A: "Eldiven giymek", B: "Alkol bazlı el antiseptiği", C: "Sadece suyla yıkamak", D: "Maske takmak" },
+    question: "Karbonmonoksit zehirlenmesinde aşağıdakilerden hangisi, hiperbarik oksijen tedavisi endikasyonlarından biri değildir?",
+    options: { A: "Gebede karboksihemoglobin ≥ %15 olması", B: "Dirençli metabolik asidoz", C: "Senkop öyküsü", D: "Normobarik tedavi ile karboksihemoglobin seviyesinin gerilememesi" },
+    answer: "D"
+  },
+  {
+    id: "YESIL-006",//yazıldı
+    categoryKey: "YESIL",
+    question: "Anafilaktik şoktaintramüsküler adrenalin uygulanmasına rağmen persistan hipotansiyon gelişmesi halinde önerilen intravenöz adrenalin uygulaması başlangıç dozu aşağıdakilerden hangisidir?",
+    options: { A: "0,001-0,005 mcg/kg/dk", B: "0,01-0,1 mcg/kg/dk", C: "0,5-1 mcg/kg/dk", D: "5-10 mcg/kg/dk" },
     answer: "B"
   },
   {
-    id: "YESIL-005",
+    id: "YESIL-007",//yazıldı
     categoryKey: "YESIL",
-    question: "Oksijen satürasyonu (SpO2) ölçümü en sık hangi yöntemle yapılır?",
-    options: { A: "Kapnografi", B: "Pulse oksimetre", C: "Arteriyel kan gazı", D: "EKG" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-006",
-    categoryKey: "YESIL",
-    question: "GKS (Glasgow Koma Skoru) hangi üç bileşenden oluşur?",
-    options: { A: "Ateş–nabız–solunum", B: "Göz–motor–sözel", C: "Ağrı–refleks–pupil", D: "Bilinç–denge–konuşma" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-007",
-    categoryKey: "YESIL",
-    question: "Acilde şok değerlendirmesinde en temel vital bulgu hangisidir?",
-    options: { A: "Boy", B: "Ağırlık", C: "Kan basıncı", D: "Göz rengi" },
+    question: "35 yaş erkek hasta, trafik kazası sonrası acil servise getiriliyor. Entübasyon edilen hastada ani desatürasyon ve hipotansiyon gelişiyor. İlk düşünülmesi gereken tanı aşağıdakilerden hangisidir?",
+    options: { A: "Pulmoner emboli", B: "Aspirasyon", C: "Tansiyon pnömotoraks", D: "Özofagus entübasyonu" },
     answer: "C"
   },
   {
-    id: "YESIL-008",
+    id: "YESIL-008",//yazıldı
     categoryKey: "YESIL",
-    question: "İntravenöz (IV) yol açmanın temel amacı hangisidir?",
-    options: { A: "Ağrı azaltmak", B: "İlaç/sıvı uygulamak", C: "Ateşi düşürmek", D: "Solunumu artırmak" },
+    question: "Genç kadın hasta suicid amaçlı ilaç alımı sonrası acil servise getiriliyor. Bilinç kapalı, solunum yavaş (6/dk), pupiller pinpoint olarak saptanıyor. Bu hastada ilk olarak yapılması gereken tedavi nedir?",
+    options: { A: "Flumazenil", B: "Nalokson", C: "Atropin", D: "Diazepam" },
     answer: "B"
   },
   {
-    id: "YESIL-009",
+    id: "YESIL-009",//yazıldı
     categoryKey: "YESIL",
-    question: "Akut ağrı kontrolünde ilk değerlendirmede en çok hangisi sorgulanır?",
-    options: { A: "Saç rengi", B: "Ağrının şiddeti", C: "Eğitim durumu", D: "Meslek" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-010",
-    categoryKey: "YESIL",
-    question: "Acilde travmada ilk yaklaşımın temel prensibi hangisidir?",
-    options: { A: "Detaylı öykü", B: "ABC yaklaşımı", C: "Sadece laboratuvar", D: "Sadece MR" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-011",
-    categoryKey: "YESIL",
-    question: "KPR’de göğüs kompresyonunun yeri neresidir?",
-    options: { A: "Sol meme ucu", B: "Sternumun alt yarısı", C: "Sağ kostalar", D: "Ksifoid" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-012",
-    categoryKey: "YESIL",
-    question: "Tansiyon pnömotoraks şüphesinde klinikte en öncelikli yaklaşım hangisidir?",
-    options: { A: "Akciğer grafisi beklemek", B: "BT çekmek", C: "Klinik tanı ile acil dekompresyon", D: "Antibiyotik başlamak" },
+    question: "24 yaş kadın hasta arı sokması sonrası 10 dakika içinde yaygın ürtiker, dudaklarda şişme, hışıltılı solunum ve baş dönmesi gelişmesi üzerine getiriliyor. Tansiyon 85/55 mmg, nabız 124/dk, solunum sayısı 28/dk. Bu hastada ilk verilmesi gereken tedavi aşağıdakilerden hangisidir?",
+    options: { A: "IV antihistaminik", B: "IV metilprednizolon", C: "IM epinefrin", D: "IV epinefrin" },
     answer: "C"
   },
   {
-    id: "YESIL-013",
+    id: "YESIL-010",//yazıldı
     categoryKey: "YESIL",
-    question: "Acilde ateş ölçümü için en pratik yöntemlerden biri hangisidir?",
-    options: { A: "CT", B: "Timpan termometre", C: "EKG", D: "USG" },
+    question: "55 yaş erkek hasta, olası septik şok tablosuyla acil servise getiriliyor. Kılavuzlara göre, hastaya uygulanması gereken ilk sıvı resüsitasyonunun dozu ve hedef süresi aşağıdakilerden hangisidir?",
+    options: { A: "1 saat içinde 10 ml/kg", B: "6 saat içinde 20 ml/kg", C: "3 saat içinde 30 ml/kg", D: "24 saat içinde 40 ml/kg" },
+    answer: "C"
+  },
+  {
+    id: "YESIL-011",//yazıldı
+    categoryKey: "YESIL",
+    question: "Yeterli sıvı resüsitasyonuna rağmen inatçı hipotansiyonu olan septik şok hastasında, ortalama arteriyel basıncı hedeflenen düzeye çıkarmak için ilk tercih edilmesi gereken vazopressör ajan aşağıdakilerden hangisidir?",
+    options: { A: "Dopamin", B: "Epinefrin", C: "Vazopressin", D: "Norepinefrin" },
+    answer: "D"
+  },
+  {
+    id: "YESIL-012",//yazıldı
+    categoryKey: "YESIL",
+    question: "Septik şok düşünülen erişkin hastada ilk yaklaşım için aşağıdakilerden hangisi en uygundur?",
+    options: { A: "Tek başına laktat sonucunu beklemek", B: "Tedaviye hemen başlamak; damaryolu, uygun kültürler, erken antibiyotik ve kristalloid resüsitasyonu planlamak", C: "Önce q-SOFA skoru hesaplayıp sonucu beklemek", D: "Başlangıçta sadece santral venöz basınç ölçümü yapmak" },
     answer: "B"
   },
   {
-    id: "YESIL-014",
+    id: "YESIL-013",//yazıldı
     categoryKey: "YESIL",
-    question: "Ciddi alerjik reaksiyonda hastanın pozisyonu için genel öneri hangisidir?",
-    options: { A: "Ayakta bekletme", B: "Supin + bacakları yükseltme (uygunsa)", C: "Yüzüstü yatırma", D: "Sürekli yürütme" },
+    question: "VF saptanan arrest hastada ilk uygulanacak tedavi nedir?",
+    options: { A: "Amiodaron", B: "Defibrilasyon", C: "Adrenalin", D: "Entübasyon" },
     answer: "B"
   },
   {
-    id: "YESIL-015",
+    id: "YESIL-014",//yazıldı
     categoryKey: "YESIL",
-    question: "SpO2 düşükse ilk yapılacaklardan biri hangisidir?",
-    options: { A: "Hemen taburcu", B: "Oksijen desteği başlamak", C: "Sadece kan şekeri bakmak", D: "Sadece idrar tahlili" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-016",
-    categoryKey: "YESIL",
-    question: "Acilde bilinç bozukluğunda hızlı değerlendirmede ilklerden biri hangisidir?",
-    options: { A: "HbA1c", B: "Kan şekeri ölçümü", C: "Kolesterol", D: "D vitamini" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-017",
-    categoryKey: "YESIL",
-    question: "Şiddetli ağrılı travmalı hastada analjezi yaklaşımı için doğru ifade hangisidir?",
-    options: { A: "Analjezi geciktirilmelidir", B: "Ağrı kontrolü erken planlanabilir", C: "Sadece sedasyon yapılır", D: "Ağrı değerlendirilmez" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-018",
-    categoryKey: "YESIL",
-    question: "IV sıvı tedavisinde ilk tercih kristalloidlerden hangisidir?",
-    options: { A: "Süt", B: "Serum fizyolojik / dengeli kristalloid", C: "Kahve", D: "Meyve suyu" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-019",
-    categoryKey: "YESIL",
-    question: "Acilde hastanın kimlik doğrulaması için temel yöntem hangisidir?",
-    options: { A: "Tahmin etmek", B: "Bileklik / kimlik kontrolü", C: "Yanındaki kişiye sormamak", D: "Sadece dosyaya bakmak" },
-    answer: "B"
-  },
-  {
-    id: "YESIL-020",
-    categoryKey: "YESIL",
-    question: "KPR sırasında ventilasyon için temel amaç hangisidir?",
-    options: { A: "Hipoksemi düzeltmek", B: "Hipertansiyon yapmak", C: "Ağrıyı azaltmak", D: "Ateşi düşürmek" },
+    question: "Aşağıdaki akut karın ağrısı sendromlarından hangisi aciliyet sıralamasında en alttadır?",
+    options: { A: "Akut perfore apandisit", B: "İnferior Mİ", C: "Rüptüre abdominal aort anevrizması", D: "Dış gebelik rüptürü" },
     answer: "A"
+  },
+  {
+    id: "YESIL-015",//yazıldı
+    categoryKey: "YESIL",
+    question: "Aşağıdaki klinik sınıflamalardan hangisi açık kırıklarla ilgilidir?",
+    options: { A: "Hunten-Hess Sınıflaması", B: "Baltazar Sınıflaması", C: "Gustillo Sınıflaması", D: "Salter-Harris Sınıflaması" },
+    answer: "C"
+  },
+  {
+    id: "YESIL-016",//yazıldı
+    categoryKey: "YESIL",
+    question: "Komalı bir hastada ciltte 'kiraz kırmızısı' diye tanımlanan bir renk değişikliği varsa, etiyolojide aşağıdakilerden hangisi öncelikle düşünülmelidir?",
+    options: { A: "Porfiri", B: "Meningokoksemi", C: "Alkol intoksikasyonu", D: "Karbonmonoksit intoksikasyonu" },
+    answer: "D"
+  },
+  {
+    id: "YESIL-017",//yazıldı
+    categoryKey: "YESIL",
+    question: "Aşağıdakilerden hangisi intraosseöz uygulama bölgelerinden biri değildir?",
+    options: { A: "Tibia", B: "Sternum", C: "Humerus", D: "Pelvis" },
+    answer: "D"
+  },
+  {
+    id: "YESIL-018",//yazıldı
+    categoryKey: "YESIL",
+    question: "Aşağıdakilerden hangisi temel bir havayolu becerisi değildir?",
+    options: { A: "Baş geri-çene yukarı manevrası", B: "Çene öne itme manevrası", C: "Balon-valv-maske uygulaması", D: "LMA yerleştirilmesi" },
+    answer: "D"
+  },
+  {
+    id: "YESIL-019",//yazıldı
+    categoryKey: "YESIL",
+    question: "Hipoglisemik olan hastaya 25 gr dekstroz vermek istersek, aşağıdaki seçeneklerden hangisi doğru olur?",
+    options: { A: "%10 dekstroz solüsyonundan 25cc veririm", B: "%20 dekstroz solüsyonundan 250cc veririm", C: "%10 dekstroz solüsyonundan 50cc veririm", D: "%20 dekstroz solüsyonundan 125cc veririm" },
+    answer: "D"
+  },
+  {
+    id: "YESIL-020",//yazıldı
+    categoryKey: "YESIL",
+    question: "65 yaşında bilinen KOAH öyküsü olan hasta, artan nefes darlığı ile başvuruyor. Kan gazında pH 7,22 pCO2 75 mmHg saptanıyor. Kontrendikasyon yoksa non-invaziv mekanik ventilasyon için en uygun başlangıç modu hangisidir?",
+    options: { A: "BİPAP", B: "CPAP", C: "Asist-Control Volüm (ACV) Ventilasyon", D: "Yüksek Akışlı Nazal Oksijen (HFNO)" },
+    answer: "A"
+  },
+      {
+    id: "YESIL-021",//yazıldı
+    categoryKey: "YESIL",
+    question: "Künt karın travması sonrası getirilen stabil hastada yapılan FAST incelemesi negatiftir. Ancak fizik muayenede kemer izi (seat-belt sign) mevcuttur. Bu hastada FAST'in en sık atladığı yaralanma bölgesi neresidir?",
+    options: { A: "Mesane rüptürü", B: "Karaciğer laserasyonu", C: "İçi boş organ yaralanması", D: "Splenik rüptür" },
+    answer: "C"
+  },
+  {
+    id: "YESIL-022",//yazıldı
+    categoryKey: "YESIL",
+    question: "Hayvan ısırıklarında 'Pasteurella' türlerine karşı en uygun profilaktik antibiyotik hangisidir?",
+    options: { A: "Sefaleksin", B: "Amoksisilin-Klavulanat", C: "Klindamisin", D: "Azitromisin" },
+    answer: "B"
+  },
+    {
+    id: "YESIL-023",//yazıldı
+    categoryKey: "YESIL",
+    question: "Akut bel ağrısı ile gelen ve 'kırmızı bayrak' bulgusu olmayan hastada ilk öneri nedir?",
+    options: { A: "Erken mobilizasyon ve NSAİİ", B: "Mutlak yatak istirahati", C: "Acil lomber MR", D: "Bel korsesi kullanımı" },
+    answer: "A"
+  },
+      {
+    id: "YESIL-024",//yazıldı
+    categoryKey: "YESIL",
+    question: "Status epileptikus yönetiminde, İV benzodiazepin sonrası nöbet devam ediyorsa aşağıdakilerden hangisi, 2.basamakta tercih edilen antiepileptik ilaçlardan biri değildir?",
+    options: { A: "Levatirasetam", B: "Fenitoin", C: "Valproik asit", D: "Ketiapin" },
+    answer: "D"
+  },
+    {
+    id: "YESIL-025",//yazıldı
+    categoryKey: "YESIL",
+    question: "Masif pulmoner embolide hemodinamik instabilite (şok) varlığında kontrendikasyon yoksa ilk tercih tedavi nedir?",
+    options: { A: "Sadece cerrahi embolektomi", B: "Sistemik trombolitik tedavi (tPA)", C: "Sadece DMAH", D: "İV kalsiyum kanal blokeri" },
+    answer: "B"
+  },
+    {
+    id: "YESIL-026",//yazıldı
+    categoryKey: "YESIL",
+    question: "Üst solunum yolu enfeksiyonu olan bir erişkinde aşağıdakilerden hangisi bakteriyel sinüziti, viral olandan ayıran en güçlü bulgudur?",
+    options: { A: "Sarı-yeşil burun akıntısı", B: "10 günden uzun süren veya kötüleşen semptomlar", C: "Sadece tek taraflı yüz ağrısı", D: "Hafif ateş ve halsizlik" },
+    answer: "B"
   },
 
   // =========================
   // ✅ SARI (20 soru) — 15 puan
   // =========================
   {
-    id: "SARI-001",
+    id: "SARI-001", //yazdık
     categoryKey: "SARI",
-    question: "Inferior ST elevasyonlu MI’da sağ ventrikül MI’ı düşündüren en önemli derivasyon hangisidir?",
-    options: { A: "V1", B: "V3", C: "V4R", D: "aVL" },
+    question: "Kardiyopulmoner resüsitasyon sırasında göğüs kompresyon oranının (chest compression fraction) kabul edilebilir minimum değeri dikkate alındığında, 50 dakikalık bir CPR sürecinde aşağıdakilerden hangisi kabul edilebilir en düşük göğüs kompresyon süresini ifade eder?",
+    options: { A: "25 dakika", B: "30 dakika", C: "35 dakika", D: "40 dakika" },
+    answer: "B"
+  },
+  {
+    id: "SARI-002", //yazdık
+    categoryKey: "SARI",
+    question: "Standart PA Akciğer grafisinde kardiyak ve mediastinal konturu oluşturan yapılar dikkate alındığında, aşağıdakilerden hangisi bu kontura katkıda bulunmaz?",
+    options: { A: "Sağ atrium", B: "Sağ ventrikül", C: "Arcus aorta", D: "Sol ventrikül" },
+    answer: "B"
+  },
+  {
+    id: "SARI-003", //yazdık
+    categoryKey: "SARI",
+    question: "Pelvik halka (pelvic ring) yaralanmalarında değerlendirilen radyografik hatlar dikkate alındığında, aşağıdakilerden hangisi pelvik halka bütünlüğü ile doğrudan ilişkili değildir?",
+    options: { A: "Acetabular tavan çizgisi", B: "Göz yaşı damlası", C: "İliosakral hat", D: "İliopektinal hat" },
+    answer: "A"
+  },
+  {
+    id: "SARI-004", //yazdık
+    categoryKey: "SARI",
+    question: "ATLS 11.baskı dikkate alındığında, aşağıdaki kavramlardan hangisi standart değerlendirme ve yönetim yaklaşımının bir parçası değildir?",
+    options: { A: "Hasar kontrol resüsitasyonu", B: "Aile içi şiddet", C: "Yüksek enerjili travma", D: "Şok indeksi" },
+    answer: "D"
+  },
+  {
+    id: "SARI-005", //yazdık
+    categoryKey: "SARI",
+    question: "Weingard ve arkadaşları tarafından geliştirilen ve 2019 yılında validasyonu yapılan, hastane öncesi ve acil servis ortamında entübasyon sırasında hem direkt hem de video laringoskopide kötü glottik görünüm ve ilk deneme başarısızlığını (first-pass fialure) öngörmede kullanılan en güçlü tek prediktör aşağıdakilerden hangisidir? ",
+    options: { A: "MACOCHA", B: "HEAVEN", C: "LEMON", D: "Cormack-Lehane" },
+    answer: "B"
+  },
+  {
+    id: "SARI-006", //yazdık
+    categoryKey: "SARI",
+    question: "Broca afazisi ile Wernicke afasizinin ayrımında aşağıdaki özelliklerden hangisi güvenilir bir ayırt edici değildir?",
+    options: { A: "Konuşma paterni", B: "Anlama", C: "Tekrarlama", D: "Kan gücü değerlendirmesi" },
     answer: "C"
   },
   {
-    id: "SARI-002",
+    id: "SARI-007", //yazdık
     categoryKey: "SARI",
-    question: "Sepsis-3’e göre sepsis tanımı hangisidir?",
-    options: { A: "Ateş + lökositoz", B: "Enfeksiyona yanıt olarak organ disfonksiyonu", C: "Hipotansiyon + taşikardi", D: "CRP yüksekliği" },
-    answer: "B"
+    question: "Aşağıdakilerden hangisi şokun tanımlanması, sınıflandırılması ve tedaviye yanıtın izlenmesinde kullanılabilen bir parametre değildir?",
+    options: { A: "Şok indeksi", B: "Baz açığı", C: "Parsiyel arteriyel O2 basıncı", D: "Perfüzyon indeksi" },
+    answer: "C"
   },
   {
-    id: "SARI-003",
+    id: "SARI-008",//yazıldı
     categoryKey: "SARI",
-    question: "Pulmoner emboli olasılığı düşük hastada dışlama için kullanılan klinik araçlardan biri hangisidir?",
-    options: { A: "PERC", B: "APGAR", C: "MELD", D: "CHADS2" },
+    question: "Acil servise başvuran bir hastanın arteriyel kan gazı ve biyokimya sonuçları şu şekildedir: pH 7,39 PaCO2 24 mmHg HCO3 14 mmol/L Na+ 142 mol/L K+ 4,0 mmol/L Cl- 108 mmol/L. Bu bulgular birlikte değerlendirildiğinde hastada mevcut olan asit-baz bozukluğu ve en olası etiyoloji aşağıdakilerden hangisidir? ",
+    options: { A: "Yüksek anyon açıklı metabolik asidoz - Metanol intoksikasyonu", B: "Normal anyon açıklı metabolik asidoz - Aşırı laksatif kullanımı", C: "Mikst bozukluk (Yüksek anyon açıklı metabolik asidoz + respiratuvar alkaloz) - Salisilat intoksikasyonu", D: "Yüksek anyon açıklı metabolik asidoz - Üremi" },
+    answer: "C"
+  },
+  {
+    id: "SARI-009",//yazıldı
+    categoryKey: "SARI",
+    question: "Alveolo-arteriyel gradiyent hesaplanırken kullanılan, hastaya ait 2 parametre aşağıdakilerden hangisidir?",
+    options: { A: "PaCO2-PaO2", B: "PaCO2-SaO2", C: "HCO3-PaCO2", D: "Anyon açığı-PaO2" },
     answer: "A"
   },
   {
-    id: "SARI-004",
+    id: "SARI-010",//yazıldı
     categoryKey: "SARI",
-    question: "Akut inmede tromboliz için en kritik unsurlardan biri hangisidir?",
-    options: { A: "Hasta boyu", B: "Semptom başlangıç zamanı", C: "Saç rengi", D: "Kan grubu" },
+    question: "Şiddetli metabolik asidozu olan hastada, aşağıdaki toksinlerden hangisi osmolar gap yüksekliği ile birlikte bilateral putamen nekrozu ve hemorajik alanlar görülmesi en olasıdır?",
+    options: { A: "Karbonmonoksit", B: "Metanol", C: "Etanol", D: "Hepatik ensefalopati" },
     answer: "B"
   },
   {
-    id: "SARI-005",
+    id: "SARI-011",//yazıldı
     categoryKey: "SARI",
-    question: "Kafa travmasında BT endikasyonunda sık kullanılan karar kuralı hangisidir?",
-    options: { A: "Wells", B: "Canadian CT Head Rule", C: "PERC", D: "Ottawa Ankle" },
+    question: "Aşağıdakilerden hangisi periferik sinir patolojisi değildir?",
+    options: { A: "Ramsey-Hunt Sendromu", B: "Bell paralizisi", C: "Anterior serebral arter infarktüsü", D: "Brakiyal pleksopati" },
+    answer: "C"
+  },
+  {
+    id: "SARI-012",//yazıldı
+    categoryKey: "SARI",
+    question: "Akut iskemik inmede IV alteplaz için kesin kontrendikasyon olmayan aşağıdakilerden hangisidir?",
+    options: { A: "18 yaş altı olmak", B: "48 saat içerisinde düşük molekül ağırlıklı heparin kullanılması", C: "Son iyi görülme halinin 4,5 saatten daha önce olması", D: "Hiperglisemi varlığı" },
+    answer: "D"
+  },
+  {
+    id: "SARI-013",//yazıldı
+    categoryKey: "SARI",
+    question: "Akut iskemik inmede trombolitik tedavi için aday bir hastada hedef kan basıncı ne olmalıdır?",
+    options: { A: "Sistolik <160 mmHg ve diastolik <100 mmHg", B: "Sistolik <230 mmHg ve diastolik <120 mmHg", C: "Sistolik ≤185 mmHg ve diastolik ≤110 mmHg", D: "Diastolik >140 mmHg" },
+    answer: "C"
+  },
+  {
+    id: "SARI-014",//yazıldı
+    categoryKey: "SARI",
+    question: "58 yaşında erkek hasta, son 2 gündür giderek artan göğüs ağrısı şikayeti ile acil servise başvuruyor. Ağrının başlangıçta eforla ortaya çıktığını ancak son 12 saattir istirahatte de devam ettiğini ve yaklaşık 30 dakika sürdüğünü ifade ediyor. Hastanın 3 hafta önce geçirilmiş miyokard enfarktüsü öyküsü mevcut. Fizik muayenede vital bulgular stabildir. Çekilden 12 derivasyonlu EKG'de belirgin ST elevasyonu saptanmıyor. İlk bakılan kardiyak troponin düzeyi normal sınırdadır Bu hastanın klinik tablosu için aşağıdakilerden hangisi doğrudur?",
+    options: { A: "Troponin normal olduğu için akut koroner sendrom dışlanır", B: "Bu tablo yalnızca miyokard enfarktüsü ile açıklanabilir", C: "Hastada akut miyokard hasarı olmadığı için kararsız anjina düşünülebilir", D: "EKG normal olduğu için klinik olarak anlamlı bir durum yoktur" },
+    answer: "C"
+  },
+  {
+    id: "SARI-015",//yazıldı
+    categoryKey: "SARI",
+    question: "40 yaşında erkek hasta, acil servise skrotuma da yayılan sol yan ağrısı ve bir kez olan titremeli ateş şikayetleri ile başvuruyor. Bu hasta için aşağıdakilerden hangisi doğrudur?",
+    options: { A: "Böbrek kolik ağrısı tarifleyen bu hastada, yüksek dereceli tıkanıklık şüphesi nedeniyle mutlaka görüntüleme yapılmalıdır", B: "Skrotal ağrı şikayeti ile başvuran tüm hastalarda testis torsiyonundan şüphelenilmelidir", C: "Bu hasta testis travması geçirdiyse %90 olasılıkla testis torsiyonu tanısı alacaktır", D: "Bu hastada enfeksiyon veya tıkanıklık ön planda düşünülüyorsa ve suprapubik kitle yani idrar retansiyonu bulgusu mevcutsa, görüntüleme yöntemleri ile inceleme gereklidir" },
+    answer: "D"
+  },
+  {
+    id: "SARI-016",//yazıldı
+    categoryKey: "SARI",
+    question: "Akut iskemik inmede intravenöz alteplaz (tPA) tedavisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    options: { A: "Semptom başlangıcından itibaren ilk 12 saat içinde uygulanabilir", B: "Doz 0,9 mg/kg olup maksimum doz 90 mg'dır", C: "BTedavi öncesi hedef kan basıncı <185/100 mmHg olmalıdır", D: "B ve C doğrudur" },
+    answer: "D"
+  },
+  {
+    id: "SARI-017",//yazıldı
+    categoryKey: "SARI",
+    question: "Akut pulmoner embolide, transtorasik ekokardiyografide aşağıdaki bulgulardan hangisi sağ ventrikül disfonksiyonu göstergesi olarak kabul edilir? ",
+    options: { A: "Sol ventrikül hipetrofisi", B: "Mc Connel bulgusu", C: "Mitral kapak prolapsusu", D: "Perikardiyal effüzyon" },
     answer: "B"
   },
   {
-    id: "SARI-006",
+    id: "SARI-018",//yazıldı
     categoryKey: "SARI",
-    question: "Akut astım atağında ilk basamak inhaler tedavilerden biri hangisidir?",
-    options: { A: "Nebül salbutamol", B: "Nebül lidokain", C: "IM penisilin", D: "IV heparin" },
+    question: "55 yaşında erkek hasta acil servise ani başlayan nefes darlığı ile başvuruyor. Öyküde 1 hafta önce diz protezi ameliyatı olduğu öğreniliyor. Tansiyon 100/65 mmHg, nabız 100/dk, solunum 26/dk, SpO2 %90. Fizik muayenede akciğer sesleri normal, ancak hasta belirgin dispneik. Bu hastada en uygun ilk tanısal yaklaşım aşağıdakilerden hangisidir?",
+    options: { A: "Akciğer grafisi çekilmesi", B: "D-dimer bakılması", C: "Toraks BT anjio çekilmesi", D: "Ekokardiyografi (EKO) çekilmesi" },
+    answer: "C"
+  },
+  {
+    id: "SARI-019",//yazıldı
+    categoryKey: "SARI",
+    question: "Serviste yatan ve durumu kötüleşen bir hastada, sepsis şüphesi bulunmaktadır. SSC 2026 Kılvauzu, hastanede yatan akut hastalarda tek başına bir sepsis tarama aracı olarak aşağıdakilerden hangisinin q-SOFA'ya tercih edilmesini önermektedir? ",
+    options: { A: "APACHE-II", B: "NEWS", C: "GKS", D: "SOFA" },
+    answer: "B" 
+  },
+  {
+    id: "SARI-020",//yazıldı
+    categoryKey: "SARI",
+    question: "70 yaşında hasta septik şok tanısıyla acil serviste takip edilmektedir ve vazopressör tedavisi başlanması planlanmaktadır. SSC 2026 Kılavuzu'nun bu yaş grubu için özel olarak önerdiği başlangıç Ortalama Arteriyel Basınç (OAB) hedef aralığı aşağıdakilerden hangisidir?",
+    options: { A: "60-65 mmHg", B: "65-70 mmHg", C: "70-75 mmHg", D: "80-85 mmHg" },
     answer: "A"
   },
   {
-    id: "SARI-007",
+    id: "SARI-021",//yazıldı
     categoryKey: "SARI",
-    question: "Akut koroner sendromda ilk değerlendirmede mutlaka istenen tetkik hangisidir?",
-    options: { A: "EKG", B: "D vitamini", C: "Kemik dansitometre", D: "MR omuz" },
+    question: "Sepsisin tanımı, tarihsel süreçte sürekli güncellenerek bugünkü halini almıştır. SSC 2026 Kılavuzu'nda da kabul edilen 'Sepsis-3' konsensusuna göre sepsis kavramının temel tıbbi tanımı aşağıdakileden hangisidir?",
+    options: { A: "Enfeksiyona karşı gelişen sistemin inflamatuvar yanıt sendromu (SIRS) varlığı", B: "Kan kültüründe patojen üremesiyle kanıtlanmış şiddetli reaksiyon", C: "Enfeksiyona bağlı olarak gelişen, hayatı tehdit edici akut organ disfonksiyonu", D: "Yeterli sıvı resüsitasyonuna yanıt vermeyen hipotansiyon" },
+    answer: "C"
+  },
+  {
+    id: "SARI-022",//yazıldı
+    categoryKey: "SARI",
+    question: "Aşağıdaki Geçici İskemik Atak (TİA) olgularından hangisi daha yüksek inme geçirme riskine sahiptir? ",
+    options: { A: "40 yaşında, 20 dakika süreli konuşma bozukluğu olan, TA: 120/70 mmHg ölçülen kadın hasta", B: "63 yaşında, 120 dakika süreli sağ kol ve bacakta hipoestesi olan, TA: 120/70 mmHg ölçülen diyabetik kadın hasta", C: "52 yaşında, 45 dakika süreli sağ tarafında güçsüzlük olan, TA: 10/80 mmHg ölçülen kadın hasta", D: "88 yaşında, 90 dakika süreli sol tarafında güçsüzlük olan, TA: 150/100 mmHg ölçülen erkek hasta" },
+    answer: "D"
+  },
+     {
+    id: "SARI-023",//yazıldı
+    categoryKey: "SARI",
+    question: "Aşağıdakilerden hangisi internal karotid arter (ICA) embolisini, orta serebral arter (MCA) embolisinden ayıran belirtidir? ",
+    options: { A: "Hemiparezi", B: "Hemihipoestezi", C: "Amarozis Fugax", D: "Bilinçte bozulma" },
+    answer: "C"
+  },
+    {
+    id: "SARI-024",//yazıldı
+    categoryKey: "SARI",
+    question: "Hangi lokalizasyondaki serebral kanamalar ventriküle en yüksek oranda açılır?",
+    options: { A: "Putamen", B: "Talamus", C: "Pons", D: "Frontal lob" },
     answer: "A"
   },
-  {
-    id: "SARI-008",
+      {
+    id: "SARI-025",//yazıldı
     categoryKey: "SARI",
-    question: "CO zehirlenmesinde pulse oksimetre ölçümü ile ilgili doğru ifade hangisidir?",
-    options: { A: "Her zaman düşük gösterir", B: "Normal/yanıltıcı olabilir", C: "COHb’yi doğrudan ölçer", D: "Tanı koydurucudur" },
-    answer: "B"
-  },
-  {
-    id: "SARI-009",
-    categoryKey: "SARI",
-    question: "Akut üst GIS kanamasında risk sınıflamasında kullanılan skorlardan biri hangisidir?",
-    options: { A: "Glasgow-Blatchford", B: "CHA2DS2-VASc", C: "SOFA", D: "APGAR" },
+    question: "Trafik kazası geçiren bir hastada, bir bacakta yüzeyel duyu kusuru varken diğer bacakta güçsüzlük varsa hangi spinal sendrom düşünülmelidir?",
+    options: { A: "Brown-Sequart Sendromu", B: "Anterior Kord Sendromu", C: "Santral Kord Sendromu", D: "Lateral ve Arka Kordon Sendromu" },
     answer: "A"
   },
-  {
-    id: "SARI-010",
+       {
+    id: "SARI-026",//yazıldı
     categoryKey: "SARI",
-    question: "Akut pankreatitte ilk görüntülemede sıklıkla tercih edilen yöntem hangisidir?",
-    options: { A: "Direkt grafi", B: "USG", C: "Kemik sintigrafisi", D: "Anjiyografi (rutin)" },
+    question: "Post ponksiyon baş ağrısının gelişmesinde en önemli faktör hangisidir?",
+    options: { A: "Alınan omurilik sıvısı hacmi", B: "Lomber ponksiyon sonrası yatak istirahati süresi", C: "Lomber ponksiyondan sonra yetersiz hidrasyon", D: "Ponksiyon iğnesinin çapı" },
+    answer: "D"
+  },
+       {
+    id: "SARI-027",//yazıldı
+    categoryKey: "SARI",
+    question: "30 yaşında kadın, epidual anestezi ile yapılan doğum sonrası 2.günde şiddetli baş ağrısı, subfebril ateş ve ardından jeneralize tonik-klonik konvülziyon ile başvuruyor. TA: 170-100 mmHg, serum AST: 225 IU/L, serum ALT 140 IU/L, serum LDH 1017 IU/L; serum Üre ve Kreatinin normal; hemoglobin 10,6 mg/dL; trombosit sayısı 50x103 µ/mL olan hastanın tanısı aşağıdakilerden hangisidir?",
+    options: { A: "Meningoensefalit", B: "PRES", C: "Serebral venöz sinüs trombozu", D: "HELLP Sendromu" },
+    answer: "D"
+  },
+      {
+    id: "SARI-028",//yazıldı
+    categoryKey: "SARI",
+    question: "MR görüntüleme ile ilgili aşağıdakilerden hangisi doğrudur?",
+    options: { A: "Yağ T1'de hipointens, T2'de izointens görünür", B: "Ödem T1'de izointens, T2'de hiperintens görünür", C: "Geç subakut hematom T1 ve T2'de hiperintens görünür", D: "Paramanyetik madde T1'de hipointens, T2'de hiperintenst görünür" },
+    answer: "C"
+  },
+      {
+    id: "SARI-029",//yazıldı
+    categoryKey: "SARI",
+    question: "58 yaşında bir hasta, sol göz kapağında hafif düşüklük şikayeti ile başvuruyor. Fizik muayenede sol gözde miyozis ve hafif pitozis saptanıyor. Göz hareketleri normal olan bu hastada göz kapağındaki düşüklüğün en olası mekanizması aşağıdakilerden hangisidir?",
+    options: { A: "Levator palpebrae superioris kasının paralizisi", B: "Müller kası disfonksiyonu", C: "Orbicularis oculi kası hipertonisi", D: "N.oculomotorius (3.kraniyal sinir) hasarı" },
     answer: "B"
   },
-  {
-    id: "SARI-011",
+      {
+    id: "SARI-030",//yazıldı
     categoryKey: "SARI",
-    question: "Gebe hastada şok tablosunda ilk yaklaşım için doğru ifade hangisidir?",
-    options: { A: "Anne stabilitesi önceliklidir", B: "Sadece fetal değerlendirme", C: "IV yol açılmaz", D: "Oksijen verilmez" },
-    answer: "A"
+    question: "Geniş damar oklüzyonu (LVO) saptanan bir hastada semptomların başlangıcından itibaren 6-24 saatlik genişletilmiş zaman penceresinde mekaniz trombektomi kararı neye göre verilir?",
+    options: { A: "Sadece hastanın yaşına", B: "Kan basıncının < 190 mmHg olmasına", C: "BT / MR perfüzyon görüntülemede saptanan 'miss-match' (kurtarılabilir doku) varlığına", D: "Hastanın diyabetik olup olmamasına" },
+    answer: "C"
   },
-  {
-    id: "SARI-012",
+       {
+    id: "SARI-031",//yazıldı
     categoryKey: "SARI",
-    question: "Akut apandisit şüphesinde ilk basamak görüntüleme seçeneği (özellikle genç/gebede) hangisidir?",
-    options: { A: "USG", B: "PET", C: "Direkt grafi", D: "EKO" },
-    answer: "A"
-  },
-  {
-    id: "SARI-013",
-    categoryKey: "SARI",
-    question: "Akut menenjit şüphesinde ampirik antibiyotik başlama zamanlaması için doğru yaklaşım hangisidir?",
-    options: { A: "BT’den sonra günlerce beklenir", B: "Geciktirilmeden başlanır", C: "Sadece kültür sonucu beklenir", D: "Hiç başlanmaz" },
+    question: "Supraventriküler taşikardi (SVT) için aşağıdakilerden hangisi yanlıştır?",
+    options: { A: "QRS genişliği öncelikle değerlendirilir", B: "Dar QRS tanısı için QRS ölçümü 0,16 sn ve altıdır", C: "Hasta stabil ise vagal manevralar denenebilir", D: "İskemik göğüs ağrısı, mental durum bozukluğu, şok, hipotansiyon ve akut kalp yetmezliği durumunda senkronize kardiyoversiyon uygulanmalı" },
     answer: "B"
   },
-  {
-    id: "SARI-014",
+      {
+    id: "SARI-032",//yazıldı
     categoryKey: "SARI",
-    question: "Hiperkalemide EKG’de görülebilecek değişikliklerden biri hangisidir?",
-    options: { A: "U dalgası belirginleşir", B: "Sivri (tented) T dalgaları", C: "PR kısalır", D: "QT uzamaz" },
+    question: "Kapnograf kullanım amaçlarından olmayan aşağıdakilerden hangisidir?",
+    options: { A: "Entübasyon tüpünün yerini doğrulamak", B: "Resüsitasyonun etkinliğini değerlendirmek", C: "Spontan dolaşımın başladığını öngörmek", D: "Defibrilasyon gerekliliğini belirlemek" },
+    answer: "D"
+  },
+       {
+    id: "SARI-033",//yazıldı
+    categoryKey: "SARI",
+    question: "70 yaşında erkek hasta, ani başlayan yırtılır tarzda sırt ağrısı ve sağ kolda güçsüzlük ile başvuruyor. Sağ kol TA: 170/90 mmHg, sol kol 130/70 mmHg ölçülüyor. Kontrastlı BT'de asendan aortu tutan diseksiyon izleniyor. Bu hastanın Stanford sınıflaması ve tedavisi için hangisi doğrudur?",
+    options: { A: "Stanford tip B - Acil cerrahi konsültasyonu", B: "Stanford tip A - Acil cerrahi konsültasyonu", C: "Stanford tip B - Sadece medikal takip", D: "Stanford tip A - Sadece medikal takip" },
     answer: "B"
   },
-  {
-    id: "SARI-015",
+      {
+    id: "SARI-034",//yazıldı
     categoryKey: "SARI",
-    question: "Hiponatremide hızlı düzeltmenin en önemli komplikasyonu hangisidir?",
-    options: { A: "Hepatit", B: "Osmotik demiyelinizasyon", C: "Pnömoni", D: "Böbrek taşı" },
+    question: "Travma resüsitasyonu esnasında Masif Transfüzyon Protokolü uygulanan bir hastada gelişen Lethal Triad bileşenleri aşağıdakilerin hangisinde tam ve doğru olarak verilmiştir?",
+    options: { A: "Hipotansiyon, bradikardi, hipotermi", B: "Asidoz, koagülopati, hipotermi", C: "Hipokalsemi, hiperkalemi, asidoz", D: "Hipovolemi, anemi, trombositopeni" },
     answer: "B"
   },
-  {
-    id: "SARI-016",
+      {
+    id: "SARI-035",//yazıldı
     categoryKey: "SARI",
-    question: "Akut inmede ilk görüntüleme (tromboliz öncesi) genellikle hangisidir?",
-    options: { A: "Kontrastsız beyin BT", B: "Direkt karın grafisi", C: "Beyin MR (her zaman)", D: "USG karotis (ilk)" },
-    answer: "A"
-  },
-  {
-    id: "SARI-017",
-    categoryKey: "SARI",
-    question: "Anafilakside adrenalin uygulama yolu (ilk tercih) hangisidir?",
-    options: { A: "IV bolus", B: "IM", C: "SC", D: "Oral" },
+    question: "Tip-2 Diyabetik bir hastada 'Öglisemik Diyabetik Ketoasidoz' tablosuna neden olabilen yeni nesil ilaç grubu hangisidir?",
+    options: { A: "Metformin", B: "SGLT-2 inhibitörleri", C: "DPP-4 inhibitörleri", D: "Sülfonilüreler" },
     answer: "B"
   },
-  {
-    id: "SARI-018",
+      {
+    id: "SARI-036",//yazıldı
     categoryKey: "SARI",
-    question: "Akut KOAH alevlenmesinde ilk basamak tedavilerden biri hangisidir?",
-    options: { A: "Nebül bronkodilatör", B: "Yalnızca antibiyotik", C: "Sadece diüretik", D: "Sadece sedasyon" },
-    answer: "A"
+    question: "Spontan pnömotoraks olan bir hastada, göğüs tüpü takıldıktan sonra akciğer ekspanse olmaz ve su altı drenaj sisteminde hava baloncuğu görüntüsü devam ediyorsa ilk şüphelenilmesi gereken durum nedir?",
+    options: { A: "Tüpün yerinden çıkması", B: "Eşlik eden masif hemotoraks", C: "Bronkoplevral fistül veya persistan hava kaçağı", D: "Re-ekspansiyon ödemi" },
+    answer: "C"
   },
-  {
-    id: "SARI-019",
+     {
+    id: "SARI-037",//yazıldı
     categoryKey: "SARI",
-    question: "DKA’da (diyabetik ketoasidoz) ilk yaklaşımın temel bileşeni hangisidir?",
-    options: { A: "Sıvı resüsitasyonu", B: "Sadece antibiyotik", C: "Sadece analjezi", D: "Sadece antiemetik" },
-    answer: "A"
+    question: "Akut pankreatit tanısında hangisi Ranson Kriterleri içerisinde yer alan 'başvuru anı' parametrelerinden biridir?",
+    options: { A: "Hemotokrit düşüşü", B: "Serum kalsiyum düzeyi", C: "Lökosit sayısı", D: "Baz açığı" },
+    answer: "C"
   },
-  {
-    id: "SARI-020",
+    {
+    id: "SARI-038",//yazıldı
     categoryKey: "SARI",
-    question: "Akut epigastrik ağrıda aort diseksiyonu şüphesinde hızlı tarama için önemli fizik bulgu hangisidir?",
-    options: { A: "Kulak ağrısı", B: "Kollar arası tansiyon farkı", C: "Döküntü", D: "Dil pası" },
-    answer: "B"
+    question: "Bilinç bulanıklığı ile getirilen hastada EKG'de QTc 520 milisaniye ve Torsades de Pointes saptanıyor; altta yatan hipomagnezemisi mevcut. İlk tercih edilecek tedavi nedir?",
+    options: { A: "İV lidokain 1,5 mg/kg bolus", B: "İV amiodaron 300 mg", C: "İV magnezyum sülfat 2 gr yavaş bolus (1-2 dakikada)", D: "Senkronize kardiyoversiyon 200 joule" },
+    answer: "C"
   },
-
+    
   // =========================
   // ✅ KIRMIZI (20 soru) — 25 puan
   // =========================
   {
-    id: "KIRMIZI-001",
+    id: "KIRMIZI-001", //yazdık
     categoryKey: "KIRMIZI",
-    question: "Refrakter VF/pVT’de (ACLS) antiaritmik seçeneklerden biri hangisidir?",
-    options: { A: "Adenozin", B: "Amiodaron", C: "Verapamil", D: "Digoksin" },
+    question: "Kapalı bir alanda meydana gelen yangına maruz kalan ve yaklaşık 30 dakika dumana maruz kaldıktan sonra kurtarılan 21 yaşındaki hastanın yönetimi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    options: { A: "Hastanın tercihen 8-8,5 numara tüple entübe edilmesi önerilir.", B: "Açıklanamayan metabolik asidoz varlığında yüze tam oturuan rezervuarlı maske ile %100 O2 verilmesi; hidroksikobalamin ve amin nitril uygulanması önerilir.", C: "Saatlik idrar çıkışının 30-50cc arasında tutulması önerilir.", D: "Bu hastanın ağrısını kontrol altında tutmak için düşük dozda morfin verilebilir." },
     answer: "B"
   },
   {
-    id: "KIRMIZI-002",
+    id: "KIRMIZI-002", //yazdık
     categoryKey: "KIRMIZI",
-    question: "Tansiyon pnömotoraksta en uygun acil yaklaşım hangisidir?",
-    options: { A: "Nazal O2", B: "Antibiyotik", C: "İğne dekompresyonu", D: "Yalnız gözlem" },
+    question: "Aşağıdakilerden hangisi beyin tomografisinde erken serebral iskemi bulgularından değildir?",
+    options: { A: "Beyin parankiminin karşı tarafa göre hipodens görünümü", B: "Lentiform nükleusun silinmesi", C: "İnsular ribbon sign (kenar işareti)", D: "Hemorajik infarkt" },
+    answer: "D"
+  },
+  {
+    id: "KIRMIZI-003", //yazdık
+    categoryKey: "KIRMIZI",
+    question: "Aşağıdaki manevralardan hangisi kalça çıkığı redüksiyonu ile ilişkili değildir?",
+    options: { A: "Whistler manevrası", B: "Kaptan Morgan manevrası", C: "Milch manevrası", D: "Allis manevrası" },
     answer: "C"
   },
   {
-    id: "KIRMIZI-003",
+    id: "KIRMIZI-004", //yazdık
     categoryKey: "KIRMIZI",
-    question: "Anafilakside IV bolus adrenalin hangi durumda daha çok düşünülür?",
-    options: { A: "Hafif ürtiker", B: "Ağır şok/kalp durması", C: "Sadece rinit", D: "Sadece kaşıntı" },
-    answer: "B"
+    question: "Aşağıdakilerden hangisi ilaca bağlı atel (drug fever) için tipik özelliklerden biri değildir?",
+    options: { A: "Ateş genellikle ilacın başlanmasından 7-10 gün sonra ortaya çıkar", B: "İlaç kesildikten sonra ateş genellikle 72 saat içinde geriler", C: "Tüm ateş vakalarının yaklaşık %3-5'ini oluşturur", D: "Relatif bradikardi ve eozinofili, vakaların %15-30'sinde görülür" },
+    answer: "D"
   },
   {
-    id: "KIRMIZI-004",
+    id: "KIRMIZI-005",//yazdık
     categoryKey: "KIRMIZI",
-    question: "KPR’de defibrilasyon endikasyonu olan ritimler hangileridir?",
-    options: { A: "Asistoli ve PEA", B: "Sinüs taşikardi", C: "VF ve pVT", D: "AF ve SVT" },
+    question: "Aşağıdaki ilaçlardan hangisinin kesilmesi (yoksunluğu) non-enfektif ateşe yol açma açısından diğerlerine göre daha az olasıdır?",
+    options: { A: "Gabapentin", B: "Levodopa", C: "Baklofen", D: "Atorvastatin" },
+    answer: "D"
+  },
+  {
+    id: "KIRMIZI-006",//yazdık
+    categoryKey: "KIRMIZI",
+    question: "Difficult Airway Society (DAS) 2025 Kılavuzu'na göre anatomik zor havayolu yönetiminde altın standart olarak kabul edilen yöntem aşağıdan hangisidir?",
+    options: { A: "Uyanık entübasyon", B: "Retrograd entübasyon", C: "Bougie-first stratejisi", D: "Scalpel-bougie tekniği" },
+    answer: "A"
+  },
+  {
+    id: "KIRMIZI-007",//yazdık
+    categoryKey: "KIRMIZI",
+    question: "Aşağıdakilerden hangisi AHA 2025 ve ERC 2025 Kılavuzları arasındaki post-kardiyak arrest bakımına ilişkin yaklaşım farklılıklarını doğru yansıtır?",
+    options: { A: "AHA hedef sıcaklık aralığını 32-37,5C olarak önerirken ERC ≤37,5C ile ateşten kaçınmayı önerir", B: "AHA ve ERC her ikisi de MAP≥65 mmHg hedefini önerir", C: "AHA refrakter VF'de DSD/VC kullanımını önerirken ERC önermez.", D: "ERC post-arrest bakım algoritmalarında opioid yönetimine yer verirken AHA'da bu yaklaşım yer almaz." },
+    answer: "A"
+  },
+  {
+    id: "KIRMIZI-008",//yazdık
+    categoryKey: "KIRMIZI",
+    question: "Amfetamin veya difenhidramin zehirlenmesi şüphesi ile getirilen bir hastada, bulguların hangi maddeye bağlı olduğunu ayırt etmek için aşağıdakilerden hangisine bakılması en değerlidir?",
+    options: { A: "Vücut ısısı", B: "Nabız sayısı", C: "Pupil muayenesi", D: "Solunum sayısı" },
+    answer: "D"
+  },
+  {
+    id: "KIRMIZI-009", //yazdık
+    categoryKey: "KIRMIZI",
+    question: "Aşağıdaki kılavuz-öneri eşleştirmelerinden hangisi, ilgili alanda literatürde ilk kez 'yüksek düzey kanıta (level-A) rağmen rutin kullanımın önerilmemesi (strong recommendation against)' şeklinde ifade edilen yaklaşımı doğru yansıtmaktadır?",
+    options: { A: "American Headache Society (AHS) 2025: Akut migren tedavisinde hidromorfin (opioid) kullanımı", B: "Surviving Sepsis Campaign 2026: Sepsis tedavisinde hidroksietil-nişasta (HES) kullanımı", C: "Difficult Airway Society (DAS) 2025: Zor havayolu yönetiminde rutin krikoid bası uygulanması", D: "European Society of Cardiology (ESC) 2024: Düşük riskli pulmoner embolide trombolitik tedavi uygulanması" },
+    answer: "A"
+  },
+  {
+    id: "KIRMIZI-010", //yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Acil servise ani başlangıçlı göğüs ağrısı ile başvuran 58 yaşında erkek hatada, ağrı tarifinin yırtılır tarzda olduğu öğreniliyor. Fizik muayenede sağ ve sol kol arasında 25 mmHg sistolik kan basıncı farkı saptanıyor. Özgeçmişinde HT öevcut. Bu hastanın aort diseksiyonu risk skoru (ADD-RS) kaçtır?",
+    options: { A: "0", B: "1", C: "2", D: "3" },
     answer: "C"
   },
   {
-    id: "KIRMIZI-005",
+    id: "KIRMIZI-011",//yazıldı
     categoryKey: "KIRMIZI",
-    question: "Status epileptikus tanımı için sık kullanılan süre eşiklerinden biri hangisidir?",
-    options: { A: "30 saniye", B: "1 dakika", C: "5 dakika", D: "60 dakika" },
+    question: "Bilinç kaybı ile başvuran bir hastanın beyin MR incelemesinde bilateral globul pallidus düzeyinde diffüzyon kısıtlanması saptanıyor. Klinik izlemde hasta kısmen düzelmekle birlikte, birkaç hafta sonra gelişen davranış değişiklikleri, bilişsel gerileme ve yürüme bozuklğu nedeniyle yeniden değerlendiriliyor. Kontrol MR'da periventriküler beyaz cevher tutulumu izleniyor. Bu klinik ve radyolojik bulguların birlikte en iyi açıkladığı tanı aşağıdakilerden hangisidir?",
+    options: { A: "Metanol intoksikasyonu", B: "Siyanür zehirlenmesi", C: "Karbonmonoksit zehirlenmesi", D: "Wilson hastalığı" },
     answer: "C"
   },
   {
-    id: "KIRMIZI-006",
+    id: "KIRMIZI-012",//yazıldı
     categoryKey: "KIRMIZI",
-    question: "Akut masif hemoptizide acil yaklaşımda en kritik hedeflerden biri hangisidir?",
-    options: { A: "Hasta aç bırakılır", B: "Hava yolunu korumak", C: "Sadece sedasyon", D: "Antihistaminik vermek" },
+    question: "Aşağıdakilerden hangisi Pnömoni Ciddiyet İndeksi (PSI) parametrelerinden biri değildir?",
+    options: { A: "Sodyum", B: "Hemoglobin", C: "Kan üre azotu", D: "Arteriyel PaO2" },
     answer: "B"
   },
   {
-    id: "KIRMIZI-007",
+    id: "KIRMIZI-013",//yazıldı
     categoryKey: "KIRMIZI",
-    question: "TRAVMA’da hava yolu kontrolü için en kritik endikasyonlardan biri hangisidir?",
-    options: { A: "Hafif baş ağrısı", B: "GKS ≤ 8", C: "İştahsızlık", D: "Bel ağrısı" },
+    question: "Botulizm ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    options: { A: "En yaygın botulizm toksini kozmetik açıdan enjeksiyon şeklinde kullanılan formudur", B: "Uygun şekilde korunmamış konserve gıdalar kaynaktır", C: "Desendan simetrik paralizi yapar", D: "Pupiller genellikle miyotik olur" },
+    answer: "D"
+  },
+  {
+    id: "KIRMIZI-014",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Sepsisle mücadele kılavuzu 2026 güncellemesine göre, septik şokta yeterli sıvı resüsitasyonu ve vazopressör infüzyonuna rağmen hala hipoperfüzyon bulguları devam ediyorsa, vazopressöre ek olarak aşağıdaki inotroplardan hangisi ilk tercih olarak eklenir?",
+    options: { A: "Dopamin", B: "Dobutamin", C: "Fenilefrin", D: "Levosimendan" },
     answer: "B"
   },
   {
-    id: "KIRMIZI-008",
+    id: "KIRMIZI-015",//yazıldı
     categoryKey: "KIRMIZI",
-    question: "Hiperkalemide membran stabilizasyonu için ilk verilen ilaç hangisidir?",
-    options: { A: "Kalsiyum glukonat", B: "Furosemid", C: "Heparin", D: "Metoprolol" },
+    question: "ATLS 11'e göre travmatik hemorajik şokta erken resüsitasyon sırasında aşağıdaki parametrelerden hangisi doku hipoperfüzyonunun şiddetini ve masif transfüzyon gereksinimini öngörmede en güçlü ve en erken göstergelerden biridir?",
+    options: { A: "Hemoglobin düzeyi", B: "Baz açığı", C: "Sistolik kan basıncı", D: "İdrar çıkışı" },
+    answer: "B"
+  },
+  {
+    id: "KIRMIZI-016",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "65 yaş hasta bilinç bulanıklığı ile acil servise getiriliyor. Kan gazında pH 7,21 pCO2 25 mmHg HCO3 10 mEq/L olarak saptanıyor. Bu hastada en olası metabolik durum aşağıdakilerden hangisidir?",
+    options: { A: "Saf metabolik asidoz", B: "Metabolik asidoz + respiratvar alkaloz", C: "Saf respiratuvar asidoz", D: "Metabolik alkaloz" },
+    answer: "B"
+  },
+  {
+    id: "KIRMIZI-017",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Septik şok nedeniyle tedavi gören 40 yaşındaki hastanın ateşi 39,5C olarak ölçülüyor. Ağrısı ya da nörolojik bir acil durumu olmayan bu hastada, salt klinik gidişatı iyileştirmek ve sepsise müdahale etmek adına ateş düşürücü kullanımıyla ilgili güncel öneri nedir?  ",
+    options: { A: "Doku oksijen tüketimini azaltmak için rutin olarak antipiretik kullanılmalıdır", B: "Klinik sonuçları iyileştirmek amacıyla ateş düşürücü ilaç veya yüzey soğutma kullanılması önerilmez", C: "Sadece parasetamol kontrendike ise NSAİİ ajanlar başlanmalıdır", D: "Sadece ateş 40C'yi geçtiğinde santral venöz soğutma kataterleri kullanılmalıdır" },
+    answer: "B"
+  },
+  {
+    id: "KIRMIZI-018",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Acil serviste septik şok tanısı alan ve acil vazopressör ihtiyacı olan bir hastanın henüz santral venöz katateri açılamamıştır. Kılavuzların bu durumdaki vazopressör yaklaşımı için güncel önerisi nedir?",
+    options: { A: "Doku nekrozunu önlemek için santral yol açılana kadar hipotansiyona izin verilmeli ve sıvıya devam edilmelidir", B: "Santral erişim sağlanmasını beklemek yerine ortala arteriyel basıncı iyileştirmek için periferik yoldan vazopressör başlanmalıdır", C: "Periferik yoldan sadece epinefrin verilebilir, norepinefrin kullanımı kesin kontrendikedir", D: "Mutlaka intraosseöz (Kİİ) erişim sağlanmalı ve 24 saat boyunca bu yoldan deam edilmelidir" },
+    answer: "B"
+  },
+  {
+    id: "KIRMIZI-019",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Septik şokta başlangıç resüsitasyonundan sonra sıvı tedavisinin sürdürülmesinde, SSC 2026 Kılavuzu hangi yaklaşımı desteklemektedir? ",
+    options: { A: "Yalnızca santral venöz basınca göre karar verilmesi", B: "Her hastaya sabit ek 30 ml/kg sıvı verilmesi", C: "Dinamik ölçümlerle yönlendirilen bireyselleştirilmiş sıvı tedavisi", D: "Laktat normale dönene kadar sınırsız kristalloid verilmesi" },
+    answer: "C"
+  },
+  {
+    id: "KIRMIZI-020",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Acil servise ateş yüksekliği, baş ağrısı ve ense sertliği ile başvuran bir hastada CRP yüksekliği ve PNL ağırlıklı lökositoz mevcuttur. Güncel kılavuzlara göre aşağıdakilerden hangisi uygun değildir?",
+    options: { A: "Deksametazon IV", B: "Seftriakson IV", C: "Beyin BT ve takiben LP", D: "Sıvı replasmanı" },
+    answer: "C"
+  },
+      {
+    id: "KIRMIZI-021",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Nalokson antidot olarak hangi durumda kullanılmaz?",
+    options: { A: "Klonidin toksisitesi", B: "Kaptopril toksisitesi", C: "Klaritromisin toksisitesi", D: "Valproik asit toksisitesi" },
+    answer: "C"
+  },
+      {
+    id: "KIRMIZI-022",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Aşağıdakilerden hangisi intravenöz trombolitik tedavi için kesin bir kontrendikasyondur?",
+    options: { A: "80 yaş üstü olmak", B: "Menstrüasyon", C: "Son 3 ay içinde geçirilmiş ciddi kafa travması veya intrakraniyal cerrahi", D: "Hafif şiddetli (NIHSS-4) inme semptomları" },
+    answer: "C"
+  },
+{
+    id: "KIRMIZI-023",//yazıldı
+    categoryKey: "KIRMIZI",
+    question: "Akut apandisitin fizik muayene bulgularından hangisinin tanımı yanlış verilmiştir?",
+    options: { A: "Dunphy belirtisi; topuk testi yapılırken sağ iliak fossada ağrı duyulması", B: "Rovsing belirtisi; sol iliak fossa palpasyonunda sağ iliak fossada ağrı hissedilmesi", C: "Obturator belirtisi; sağ kalça fleksiyondayken internal ve eksternal rotasyonda sağ iliak fosada ağrı hissedilmesi", D: "Psoas belirtisi; sağ kalça ekstsansiyona getirilirken sağ iliak fossada ağrı hissedilmesi" },
     answer: "A"
   },
-  {
-    id: "KIRMIZI-009",
+      {
+    id: "KIRMIZI-024",//yazıldı
     categoryKey: "KIRMIZI",
-    question: "Akut koroner sendromda hayatı tehdit eden mekanik komplikasyonlardan biri hangisidir?",
-    options: { A: "Kolelitiazis", B: "Papiller kas rüptürü", C: "Otit", D: "Sinüzit" },
-    answer: "B"
+    question: "Kafa travması sonrası acil servise getirilen hastanın pupil muayenesinde sağda midriyazis ve dışa aşağıya bakış saptanıyor. Bu klinik tablo hangi herniasyon tipinin en spesifik bulgusudur?",
+    options: { A: "Tonsiller herniasyon", B: "Subfalsiyan herniasyon", C: "Uncal herniasyon", D: "Santral herniasyon" },
+    answer: "C"
   },
-  {
-    id: "KIRMIZI-010",
+      {
+    id: "KIRMIZI-025",//yazıldı
     categoryKey: "KIRMIZI",
-    question: "Aort diseksiyonunda ilk hedeflerden biri hangisidir?",
-    options: { A: "Ağrıyı artırmak", B: "Nabız ve tansiyon kontrolü", C: "Bol sıvı yüklemek", D: "Sadece antibiyotik" },
-    answer: "B"
-  },
-  {
-    id: "KIRMIZI-011",
-    categoryKey: "KIRMIZI",
-    question: "Akut iskemik inmede trombektomi düşünülmesinde en kritik unsurlardan biri hangisidir?",
-    options: { A: "Saç tipi", B: "Büyük damar oklüzyonu varlığı", C: "Kan grubu", D: "Boy uzunluğu" },
-    answer: "B"
-  },
-  {
-    id: "KIRMIZI-012",
-    categoryKey: "KIRMIZI",
-    question: "Septik şokta ilk saat yaklaşımı için doğru seçenek hangisidir?",
-    options: { A: "Sadece analjezi", B: "Sıvı + erken antibiyotik", C: "Sadece antihistaminik", D: "Bekle-gör" },
-    answer: "B"
-  },
-  {
-    id: "KIRMIZI-013",
-    categoryKey: "KIRMIZI",
-    question: "PEA arrestte en önemli yaklaşım hangisidir?",
-    options: { A: "Defibrilasyon", B: "Kompresyon + geri döndürülebilir nedenleri araştırma", C: "Sadece atropin", D: "Sadece oksijen" },
-    answer: "B"
-  },
-  {
-    id: "KIRMIZI-014",
-    categoryKey: "KIRMIZI",
-    question: "Akut koroner sendromda ST elevasyonlu MI’da reperfüzyon için temel seçenek hangisidir?",
-    options: { A: "Sadece aspirin", B: "Primer PCI / fibrinoliz", C: "Sadece statin", D: "Sadece antibiyotik" },
-    answer: "B"
-  },
-  {
-    id: "KIRMIZI-015",
-    categoryKey: "KIRMIZI",
-    question: "Nörojenik şok ile ilgili doğru ifade hangisidir?",
-    options: { A: "Her zaman taşikardi", B: "Bradikardi + hipotansiyon görülebilir", C: "Sadece ateş yapar", D: "Hipertansiyon yapar" },
-    answer: "B"
-  },
-  {
-    id: "KIRMIZI-016",
-    categoryKey: "KIRMIZI",
-    question: "Akut adrenal kriz (Addison krizi) tedavisinde temel yaklaşım hangisidir?",
-    options: { A: "Sadece antibiyotik", B: "IV hidrokortizon + sıvı", C: "Sadece diüretik", D: "Sadece antihistaminik" },
-    answer: "B"
-  },
-  {
-    id: "KIRMIZI-017",
-    categoryKey: "KIRMIZI",
-    question: "Hipotermik hastada aritmi riskini artıran önemli faktörlerden biri hangisidir?",
-    options: { A: "Nazal O2", B: "Kaba manipülasyon", C: "Sıcak battaniye", D: "Yavaş ısıtma" },
-    answer: "B"
-  },
-  {
-    id: "KIRMIZI-018",
-    categoryKey: "KIRMIZI",
-    question: "Travmada masif kanama kontrolünde ilk basamaklardan biri hangisidir?",
-    options: { A: "Turnike/basınç", B: "Antihistaminik", C: "Antibiyotik tek başına", D: "Sadece tetkik beklemek" },
-    answer: "A"
-  },
-  {
-    id: "KIRMIZI-019",
-    categoryKey: "KIRMIZI",
-    question: "Akut kardiyojenik şokta sık kullanılan vazopressör/inotrop ajanlardan biri hangisidir?",
-    options: { A: "Norepinefrin", B: "Parasetamol", C: "Ibuprofen", D: "Loperamid" },
-    answer: "A"
-  },
-  {
-    id: "KIRMIZI-020",
-    categoryKey: "KIRMIZI",
-    question: "Yüksek riskli hava yolu ödeminde (ör. anafilaksi/anjiyoödem) en önemli öncelik hangisidir?",
-    options: { A: "Antiemetik vermek", B: "Hava yolunu güvenceye almak", C: "Diyet düzenlemek", D: "Sadece gözlem" },
+    question: "40 yaşında kadın hasta, ani gelişen senkop sonrası acil servise getiriliyor. 12 derivasyon EKG'de Tip 1 Brugada paterni izleniyor. Hastanın öyküsünde ailede ani ölüm mevcuttur. Bu hastada kesin tedavi yönetimi için en uygun adım nedir??",
+    options: { A: "Beta bloker tedavisi başlamak", B: "ICD", C: "Kalsiyum kanal blokeri kullanımı", D: "Oral amiodaron yüklemesi" },
     answer: "B"
   },
 
@@ -1029,75 +1233,111 @@ Ankara Resüs
   // 🧩 BONUS (10 soru) — ŞABLON (sen dolduracaksın)
   // =========================
   {
-    id: "BONUS-001",
+    id: "BONUS-001", //yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 1 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
+    question: "Kanıt düzeyi piramidi dikkate alındığında, aşağıdaki çalışma türletinden hangisi gözlemsel bir araştırma olup diğerlerine göre daha düşük bir kanıt düzeyine sahiptir?",
+    options: { A: "Kohort çalışmaları", B: "Meta-analiz", C: "Sistematik derlemeler", D: "Klinik rehberler" },
     answer: "A"
   },
   {
-    id: "BONUS-002",
+    id: "BONUS-002",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 2 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
+    question: "Aşağıdaki çalışmalardan hangisi çok merkezli, çok ülkeli/çok kıtalı, randomize, plasebo kontrollü ve kör bir çalışma değildir?",
+    options: { A: "CRUSH II", B: "HALT-IT", C: "CRUSH III", D: "REACT II" },
+    answer: "D"
+  },
+  {
+    id: "BONUS-003",//yazıldı
+    categoryKey: "BONUS",
+    question: "Modern CPR (göğüs kompresyonu + ventilasyon) ilk kez hangi yıl tanımlanmıştır?",
+    options: { A: "1920", B: "1945", C: "1960", D: "1985" },
+    answer: "C"
+  },
+  {
+    id: "BONUS-004",//yazıldı
+    categoryKey: "BONUS",
+    question: "İlk başarılı insan defibrilasyonu hangi ortamda yapılmıştır?",
+    options: { A: "Acil servis", B: "Ambulans", C: "Ameliyathane", D: "Yoğun bakım" },
+    answer: "C"
+  },
+  {
+    id: "BONUS-005",//yazıldı
+    categoryKey: "BONUS",
+    question: "Acil Tıp, Türkiye'de ayrı bir tıpta uzmanlık dalı olarak hangi yıl kabul edilmiştir?",
+    options: { A: "1983", B: "1993", C: "1998", D: "2005" },
+    answer: "B"
+  },
+  {
+    id: "BONUS-006",//yazıldı
+    categoryKey: "BONUS",
+    question: "Aşağıdaki triyaj sistemlerinden hangisi 5 seviyeli olup, acil serviste hasta önceliklendirmesi için yaygın olarak kullanılmaktadır?)",
+    options: { A: "START (Simple Triage and Rapid Treatment)", B: "MTS (Manchester Triage System)", C: "SATS (South African Triage Scale)", D: "JTAS (Japan Triage and Acuity Scale)" },
+    answer: "B"
+  },
+  {
+    id: "BONUS-007",//yazıldı
+    categoryKey: "BONUS",
+    question: "Ondokuzuncu yüzyılda özellikle tropikal bölgelerde görev yapan İngiliz askerleri, sıtma hastalığından korunmak amacıyla kinin içeren acı bir sıvı tüketmekteydi. Zamanla bu sıvının tadını iyileştirmek için içine şeker ve gaz eklenmiş, böylece günümüzde yaygın olarak tüketilen bir içecek ortaya çıkmıştır. Bu tarihsel süreçte kullanılan ve günümüzde de tüketilen bu sıvı, şaşağıdakilerden hangisidir?",
+    options: { A: "Soda", B: "Enerji içeceği", C: "Tonik su (tonic water)", D: "Maden suyu" },
     answer: "A"
   },
   {
-    id: "BONUS-003",
+    id: "BONUS-008",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 3 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
-    answer: "A"
+    question: "Liverpool maçında sakatlanan futbolcu Noa Lang'a saha kenarında ağrı kontrolü amacılyla, halk arasında 'yeşil düdük (green whistle)' olarak bilinen ve inhale edilerek kullanılan bir ajan verilmiştir. Bu ajan damar yolu gerektirmeden, hızlı analjezi sağlar ve özellikle travma hastalarında acil durumlarda tercih edilir. Bu ajan aşağıdakilerden hangisidir?",
+    options: { A: "Morfin", B: "Lidokain", C: "Metoksifluran", D: "Fentanil" },
+    answer: "C"
   },
   {
-    id: "BONUS-004",
+    id: "BONUS-009",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 4 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
-    answer: "A"
+    question: "Napolyon Savaşları sırasında savaş alanında yaralılara daha hızlı müdahale edebilmek amacıyla, 'uçan ambulans (ambulance volante)' konsepini ve ilk modern triyaj uygulamalarını geliştiren, acil tıbbın tarihsel öncülerinden kabul edilen Fransız cerrah kimdir?",
+    options: { A: "Calude Beck", B: "Peter Safar", C: "Rene Triage", D: "Dominique Jean Larrey" },
+    answer: "D"
   },
   {
-    id: "BONUS-005",
+    id: "BONUS-010",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 5 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
-    answer: "A"
+    question: "Acil tıbbın bağımsız bir uzmanlık dalı olarak gelişiminde en önemli kilometre taşlarından biri sayılan ve Dr.Bruce Janiak'ın ilk asistan olarak kabul edildiği dünyadaki ilk Acil Tıp ihtisas (residency) programı 1970 yılında hangi merkezde başlamıştır?",
+    options: { A: "Kanuni Sultan Süleyman Eğitim ve Araştırma Hastanesi", B: "University of Cinninati", C: "John Hopkins University", D: "Massachutts General Hospital" },
+    answer: "B"
   },
   {
-    id: "BONUS-006",
+    id: "BONUS-011",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 6 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
-    answer: "A"
+    question: "Modern kardiyopulmoner resüsitasyonun gelişiminde temel isimlerden biri olarak kabul edilen kişi kimdir?",
+    options: { A: "William Harvey", B: "Peter Safar", C: "Joseph Lister", D: "Andreas Vesalius" },
+    answer: "B"
   },
   {
-    id: "BONUS-007",
+    id: "BONUS-012",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 7 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
-    answer: "A"
+    question: "Aşağıdakilerden hangisi Acil Tıp Uzmanlığının ülkemizde (ve dünyada) müstakil bir uzmanlık olmasının önde gelen nedenlerinden biri değildir?",
+    options: { A: "Kentleşme ve sağlık hizmetlerine ulaşım", B: "Sağlık finansmanı ve sosyal güvenlik açıkları", C: "Refah ve zenginleşme, halkın talepleri", D: "Alanda çalışan doktorların çabaları" },
+    answer: "D"
   },
   {
-    id: "BONUS-008",
+    id: "BONUS-013",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 8 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
-    answer: "A"
+    question: "Aşağıdaki parenteral ağrı tedavilerinin hangisinin orta ve şiddetli migren baş ağrıs atağında kullanılması önerilmemektedir?",
+    options: { A: "Proklorperazin İV", B: "Parasetamol IV", C: "Metoklopramid İV", D: "Ketorolak İV" },
+    answer: "B"
   },
   {
-    id: "BONUS-009",
+    id: "BONUS-014",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 9 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
-    answer: "A"
+    question: "Batı dünyasında Avicenna olarak tanınan İbn-i Sina'nın yazdığı, 17.yüzyılın ortalarına kadar hem Avrupa hem de İslam Dünyası'ndaki tıp fakültelerinde temel ders kitabı olarak okutulan, 17 dile çevrilmiş 5 ciltten oluşan dev eserin adı nedir?",
+    options: { A: "Kitabü'ş-Şifa (İyileşme Kitabı)", B: "El-Kanun Fi't-Tıbb (Tıbbın Kanunu)", C: "Kitabü'l-Münviri (Aydınlanma Kitabı)", D: "Hıfzıssıhha (Sağlığın Koruması)" },
+    answer: "B"
   },
   {
-    id: "BONUS-010",
+    id: "BONUS-015",//yazıldı
     categoryKey: "BONUS",
-    question: "BONUS SORU 10 (burayı değiştir)",
-    options: { A: "A", B: "B", C: "C", D: "D" },
-    answer: "A"
+    question: "İbn-i Sina, klinik gözlemleri ile modern tıbbın birçok kavramını yüzyıllar öncesinden tanımlamıştır. Aşağıdakilerden hangisi İbn-i Sina'nın bizzat gözlemleyip eserlerinde detaylandırdığı tıbbi durumlardan biri değildir??",
+    options: { A: "Karantina uygulamasının bulaşıcı hastalık yayılımını engellemesi", B: "Diyabet hastalarının idrarındaki tatlılık", C: "Nabız muayenesi ile hastalık teşhisi", D: "Kan dolaşımının (küçük dolaşım) akciğerlerde gerçekleştiği" },
+    answer: "D"
   }
+      
 ];
 
     /***********************
@@ -1704,14 +1944,16 @@ function resetAll(){
 
     $('btnDemoFill').addEventListener('click', ()=>{
       $('teamTextarea').value = [
+        '4 Silahşörler',
+        'Nahita',
+        'Şevko Acil',
+        'Noktua',
+        'Primum non nocere',
+        'BezmiTeam',
+        'PAÜ Resüsiteam',
         'Konya City',
-        'Ankara Resüs',
-        'İzmir Şok',
-        'Bursa Monitor',
-        'Antalya Triage',
-        'Samsun USG',
-        'Adana Travma',
-        'İstanbul EKG'
+        'Nabız yok biz varız',
+        "9'uncu Senfoni"
       ].join('\n');
       showScreen('screenTeams');
     });
