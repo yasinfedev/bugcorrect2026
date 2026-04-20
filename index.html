@@ -1344,26 +1344,28 @@ Nabız yok biz varız
      *  APP STATE
      ***********************/
     const state = {
-      teams: [],               // {name, score}
-      activeTeamNames: [],     // current stage participants (subset)
-      stageIndex: 0,           // 1,2,3
-      stageName: '',
-      stagePlan: null,         // list of categories to ask
-      stageTotalQuestions: 0,
-      stageAskedCount: 0,      // non-tiebreak asked count
-      tieBreak: false,
-      tieCandidates: [],       // team names in tie-break
-      currentQuestion: null,
-      timer: { seconds:30, remaining:30, interval:null },
-      usedQuestionIds: new Set(),
-      cutoff: null,            // 4 for stage1, 3 for stage2, 1 for final winner
-            tieBreakQuestionsAsked: 0,     // tie-breakte kaç soru soruldu
-      tieSafeNames: [],              // cutoff puanının üstünde kalan "güvenli" takımlar
-      pendingComp: null,             // { amount:number, names:[...] } -> sonraki aşama başında eklenecek
-      tieBreakBaseScores: {},     // tie-break başlarken adayların skor snapshot'ı
-tieBreakExtra: {},          // tie-break boyunca adayların kazandığı "ek puan" (toplam skora yazılmayacak)
-      stageTieExtra: {},          // bu aşamada tie-break’ten gelen ekstra puanlar (sıralama kriteri)
-    };
+  teams: [],
+  activeTeamNames: [],
+  stageIndex: 0,
+  stageName: '',
+  stagePlan: null,
+  stageTotalQuestions: 0,
+  stageAskedCount: 0,
+  tieBreak: false,
+  tieCandidates: [],
+  tieBreakSlots: 0,
+  tieBreakLocked: false,
+  currentQuestion: null,
+  timer: { seconds:30, remaining:30, interval:null },
+  usedQuestionIds: new Set(),
+  cutoff: null,
+  tieBreakQuestionsAsked: 0,
+  tieSafeNames: [],
+  pendingComp: null,
+  tieBreakBaseScores: {},
+  tieBreakExtra: {},
+  stageTieExtra: {},
+};
 
     const STAGES = [
       null,
@@ -1716,6 +1718,10 @@ formatStagePills();
       state.stageAskedCount = 0;
       state.tieBreak = false;
       state.tieCandidates = [];
+      state.tieBreakSlots = 0;
+state.tieBreakLocked = false;
+state.tieBreakBaseScores = {};
+state.tieBreakExtra = {};
       state.activeTeamNames = participantNames.slice();
       state.stageTieExtra = {};   // ✅ yeni aşamaya temiz başla
             // ✅ Önceki aşamadan tie-break kompanzasyonu varsa, yeni aşama başında uygula
@@ -1795,6 +1801,46 @@ formatStagePills();
   return { hasTie:true, tiedNames };
 }
 
+    function computeTieBreakResolution(candidateNames, slots){
+  const arr = candidateNames
+    .map(name => ({
+      name,
+      base: state.tieBreakBaseScores[name] || 0,
+      extra: state.tieBreakExtra[name] || 0
+    }))
+    .sort((a,b)=>{
+      const dBase = b.base - a.base;
+      if(dBase !== 0) return dBase;
+
+      const dExtra = b.extra - a.extra;
+      if(dExtra !== 0) return dExtra;
+
+      return a.name.localeCompare(b.name, 'tr');
+    });
+
+  if(arr.length <= slots){
+    return {
+      resolved: true,
+      winners: arr.map(x => x.name),
+      losers: []
+    };
+  }
+
+  const boundaryWinner = arr[slots - 1];
+  const boundaryLoser = arr[slots];
+
+  const unresolved =
+    boundaryWinner.base === boundaryLoser.base &&
+    boundaryWinner.extra === boundaryLoser.extra;
+
+  return {
+    resolved: !unresolved,
+    winners: arr.slice(0, slots).map(x => x.name),
+    losers: arr.slice(slots).map(x => x.name),
+    ranking: arr
+  };
+}
+
     function showScoreboardForStage(){
   startStandby();
   showScreen('screenScoreboard');
@@ -1855,31 +1901,7 @@ const extraCell = showExtraCol
   const tie = computeCutoffTie(state.activeTeamNames, cutoff);
   const tieInfo = $('tieInfo');
 
-  if(tie.hasTie){
-    const cutoffScore = sorted[cutoff-1].score;
-
-    state.tieBreak = true;
-    state.tieCandidates = tie.tiedNames.slice();
-
-    state.tieBreakQuestionsAsked = 0;
-    state.tieSafeNames = sorted
-      .filter(t => t.score > cutoffScore)
-      .map(t => t.name);
-
-    // ✅ Tie-break başlarken: adayların skorunu snapshot al, ek puanları sıfırla
-state.tieBreakBaseScores = {};
-state.tieBreakExtra = {};
-state.tieCandidates.forEach(n=>{
-  const team = state.teams.find(t=>t.name===n);
-  state.tieBreakBaseScores[n] = team ? team.score : 0;
-  state.tieBreakExtra[n] = 0;
-});
-
-    stopStandby();
-    showScreen('screenQuestion');
-    nextQuestion();
-    return;
-  }
+  showScoreboardForStage
 
   // Eğer tie yoksa normalde DEVAM butonu görünür olmalı
   $('btnProceedNextStage').classList.toggle('d-none', state.stageIndex === 3);
@@ -1913,9 +1935,14 @@ function resetAll(){
   state.stageTotalQuestions = 0;
   state.stageAskedCount = 0;
   state.tieBreak = false;
-  state.tieCandidates = [];
-  state.currentQuestion = null;
-  state.usedQuestionIds = new Set();
+state.tieCandidates = [];
+state.tieBreakSlots = 0;
+state.tieBreakLocked = false;
+state.currentQuestion = null;
+state.usedQuestionIds = new Set();
+state.tieBreakBaseScores = {};
+state.tieBreakExtra = {};
+state.stageTieExtra = {};
 
   $('stagePill').classList.add('d-none');
   $('subStagePill').classList.add('d-none');
@@ -2012,31 +2039,24 @@ pointsModalEl.addEventListener('hidden.bs.modal', ()=>{
 
       
 
-if(state.tieBreak){
-  // ✅ Tie-break sıralaması: sadece ekstra puana göre
-  const candSorted = state.tieCandidates
-    .map(n => ({
-      name: n,
-      extra: state.tieBreakExtra[n] || 0
-    }))
-    .sort((a,b)=> b.extra - a.extra || a.name.localeCompare(b.name,'tr'));
+if(state.tieBreak && state.tieBreakLocked){
+  const result = computeTieBreakResolution(state.tieCandidates, state.tieBreakSlots);
 
-  const topExtra = candSorted[0]?.extra ?? 0;
-  const allSame = candSorted.every(x => x.extra === topExtra);
-
-  if(!allSame){
-    // ✅ Tie-break çözüldü: toplam skorları geri garanti et (zaten değişmedi ama net olsun)
+  if(result.resolved){
+    // toplam skorları eski haliyle bırakıyoruz
     state.tieCandidates.forEach(n=>{
       const team = state.teams.find(t=>t.name===n);
       if(team) team.score = state.tieBreakBaseScores[n] ?? team.score;
     });
 
-    // ✅ Tie-break temizle
+    // tie-break bitti
     state.tieBreak = false;
+    state.tieBreakLocked = false;
     state.tieCandidates = [];
+    state.tieBreakSlots = 0;
     state.tieSafeNames = [];
     state.tieBreakQuestionsAsked = 0;
-    state.pendingComp = null; // artık kompanzasyona gerek yok
+    state.pendingComp = null;
     state.tieBreakBaseScores = {};
     state.tieBreakExtra = {};
   }
